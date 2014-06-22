@@ -1,4 +1,4 @@
-testDeck
+Slide deck for FIFA stats shiny app
 ========
 
 This is a test deck for publishing a slidify document.
