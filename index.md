@@ -3,7 +3,7 @@ title       : FIFA World Cup Stats
 subtitle    : Interactive analyzer of world cup matches since 1930
 author      : Vitaliy Baklikov
 job         : 
-framework   : shower        # {io2012, html5slides, shower, dzslides, ...}
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 theme       : solarized
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 

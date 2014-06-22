@@ -1,43 +1,51 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html>
 <head>
-	<title>FIFA World Cup Stats</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=1274, user-scalable=no">
-	<meta name="description" content="FIFA World Cup Stats">
-	<meta name="author" content="Vitaliy Baklikov">
-	<meta name="generator" content="slidify" />
-	<!-- LOAD STYLE SHEETS -->
-	<link rel="stylesheet" href="libraries/frameworks/shower/themes/ribbon/styles/screen.css">
-	<link rel="stylesheet" media="print"
-	  href="libraries/frameworks/shower/themes/ribbon/styles/print.css">
-	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css">  <link rel="stylesheet" href = "assets/css/ribbons.css">
+  <title>FIFA World Cup Stats</title>
+  <meta charset="utf-8">
+  <meta name="description" content="FIFA World Cup Stats">
+  <meta name="author" content="Vitaliy Baklikov">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
-	<!--
-		To apply styles to the certain slides
-		use slide ID to get needed elements
-		-->
-	<style>
-		#Cover h2 {
-      margin:65px 0 0;
-			color:#FFF;
-			text-align:center;
-			font-size:70px;
-			}
-		#FitToWidth h2,
-		#FitToHeight h2 {
-			color:#FFF;
-			text-align:center;
-			}
-	</style> 
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
 </head>
-<body class="list">
-  <header class="caption">
-  	<h1>FIFA World Cup Stats</h1>
-	</header>
-  <section class="slide " id="slide-1">
-  <div>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>FIFA World Cup Stats</h1>
+    <h2>Interactive analyzer of world cup matches since 1930</h2>
+    <p>Vitaliy Baklikov<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
     <h2>Shiny app</h2>
+  </hgroup>
+  <article data-timings="">
     <p>In the spirit of FIFA World Cup 2014 that is undergoing at the time of this writing, this is an attempt to create an interactive Data Product that analyzes FIFA World Cup matches since the first tournament held in 1930. </p>
 
 <p>We will focus on </p>
@@ -48,11 +56,15 @@
 <li>Future improvements and functionality</li>
 </ol>
 
-  </div>
-</section>
-<section class="slide class" id="id">
-  <div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
     <h2>World Cup Dataset</h2>
+  </hgroup>
+  <article data-timings="">
     <p>To our surprise, there is not much open data on world cup matches. FIFA, the organizer of the tournament, does not disclose such data to public. The data that is being analyzed with this application is from open sources. A special thanks goes to <a href="https://github.com/openfootball/world-cup"><strong>openfootball</strong></a> administrators for making the database free and public. </p>
 
 <p>The dataset has been precompiled and filtered in R to the following resulting dataframe</p>
@@ -68,11 +80,15 @@
 ## 2        0       0       0      1   1930
 </code></pre>
 
-  </div>
-</section>
-<section class="slide " id="slide-3">
-  <div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
     <h2>Shiny app functionality</h2>
+  </hgroup>
+  <article data-timings="">
     <p>The application has been developed with <code>library(shiny)</code> and <code>library(ggvis)</code> plotting to embrace interactivity. It is hosted with the help of shinyapps.io and can be tried at <a href="http://vbaklikov.github.io/testDeck/index.html">http://vbaklikov.github.io/testDeck/index.html</a>. Currently, there are 3 options available to filter and display the data </p>
 
 <ol>
@@ -83,11 +99,15 @@
 
 <p>The application displays the data according to filters in interactive mode and also <em>computes</em> the number of games played and number of goals scored.   </p>
 
-  </div>
-</section>
-<section class="slide " id="slide-4">
-  <div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
     <h2>Future improvements</h2>
+  </hgroup>
+  <article data-timings="">
     <p>The application is currently limited in scope to a) the amount of data that it analyzes and b) number of filters that it makes available. The following improvements are coming in the subsequent releases</p>
 
 <ol>
@@ -96,18 +116,51 @@
 <li>Match attendance data and country/city the game was played</li>
 </ol>
 
-  </div>
-</section>
-  <div class="progress">
-    <div></div>
-  </div>
-	<script src="libraries/frameworks/shower/shower.js"></script>
-	<!-- LOAD HIGHLIGHTER JS FILES -->
-	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
-	 
-		<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
-	<!-- Photos by John Carey — fiftyfootshadows.net -->
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Shiny app'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='World Cup Dataset'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Shiny app functionality'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Future improvements'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
 </body>
-</html>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
