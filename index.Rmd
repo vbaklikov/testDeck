@@ -1,7 +1,7 @@
 ---
-title       : Test deck
+title       : FIFA World Cup Stats
 subtitle    : 
-author      : 
+author      : Vitaliy Baklikov
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -10,17 +10,25 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 ---
 
-## Read-And-Delete
+## Shiny app
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+In the spirit of FIFA World Cup 2014 that is undergoing at the time of this writing, this is an attempt to create an interactive Data Product that analyzes FIFA World Cup matches since the first tournament held in 1930. 
+
+1. World Cup dataset
+2. Shiny app functionality
+3. Future improvements
 
 --- .class #id 
 
-## Slide 2
-
+## World Cup Dataset
 ```{r, fig.height=5, fig.width=5}
 plot(1 : 10, 1 : 10)
 ```
+---
+
+## Functionality
+
+---
+
+## Future improvements
 
