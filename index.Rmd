@@ -1,9 +1,10 @@
 ---
 title       : FIFA World Cup Stats
-subtitle    : 
+subtitle    : Interactive analyzer of world cup matches since 1930
 author      : Vitaliy Baklikov
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+theme       : solarized
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
@@ -14,21 +15,50 @@ mode        : selfcontained # {standalone, draft}
 
 In the spirit of FIFA World Cup 2014 that is undergoing at the time of this writing, this is an attempt to create an interactive Data Product that analyzes FIFA World Cup matches since the first tournament held in 1930. 
 
+We will focus on 
+
 1. World Cup dataset
 2. Shiny app functionality
-3. Future improvements
+3. Future improvements and functionality
 
---- .class #id 
+--- .class #id
 
 ## World Cup Dataset
-```{r, fig.height=5, fig.width=5}
-plot(1 : 10, 1 : 10)
+
+To our surprise, there is not much open data on world cup matches. FIFA, the organizer of the tournament, does not disclose such data to public. The data that is being analyzed with this application is from open sources. A special thanks goes to [__openfootball__](https://github.com/openfootball/world-cup) administrators for making the database free and public. 
+
+The dataset has been precompiled and filtered in R to the following resulting dataframe
+
+```{r,echo=FALSE}
+allFIFAwc <- read.csv(file="data/allFIFAwc.csv", header=FALSE, stringsAsFactors = FALSE)
+names(allFIFAwc) <- c("id","gameType", "team1", "team2", "gameDate", "score1", "score2", "score1et", "score2et", "score1p", "score2p", "winner" )
+allFIFAwc[is.na(allFIFAwc)] <- 0
+allFIFAwc$wcYear <- format(as.Date(allFIFAwc$gameDate),"%Y")
+allFIFAwc$gameDate <- as.Date(allFIFAwc$gameDate)
 ```
+```{r}
+head(allFIFAwc, n=2)
+```
+
 ---
 
-## Functionality
+## Shiny app functionality
+
+The application has been developed with `library(shiny)` and `library(ggvis)` plotting to embrace interactivity. It is hosted with the help of shinyapps.io and can be tried at http://vbaklikov.github.io/testDeck/index.html. Currently, there are 3 options available to filter and display the data 
+
+1. World Cup slider to filter the data based on range of tournaments
+2. Text input to filter data for a specic team
+3. Drop down to filter data based on tournament stage
+
+The application displays the data according to filters in interactive mode and also _computes_ the number of games played and number of goals scored.   
 
 ---
 
 ## Future improvements
 
+The application is currently limited in scope to a) the amount of data that it analyzes and b) number of filters that it makes available. The following improvements are coming in the subsequent releases
+
+
+1. Data added on match statistics such as corners, possesion, shots on target, yellow/red cards
+2. Data added on players for each match - name, age, appearance for the team, club affiliation
+3. Match attendance data and country/city the game was played
