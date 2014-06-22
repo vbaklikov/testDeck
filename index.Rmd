@@ -4,7 +4,7 @@ subtitle    : Interactive analyzer of world cup matches since 1930
 author      : Vitaliy Baklikov
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
-theme       : solarized
+theme       : default
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
@@ -44,7 +44,7 @@ head(allFIFAwc, n=2)
 
 ## Shiny app functionality
 
-The application has been developed with `library(shiny)` and `library(ggvis)` plotting to embrace interactivity. It is hosted with the help of shinyapps.io and can be tried at http://vbaklikov.github.io/testDeck/index.html. Currently, there are 3 options available to filter and display the data 
+The application has been developed with `library(shiny)` and `library(ggvis)` plotting to embrace interactivity. It is hosted with the help of shinyapps.io and can be tried at https://vbaklikov.shinyapps.io/DataProducts_FIFAStats/. Currently, there are 3 options available to filter and display the data
 
 1. World Cup slider to filter the data based on range of tournaments
 2. Text input to filter data for a specic team
